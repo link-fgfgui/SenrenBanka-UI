@@ -22,6 +22,8 @@ public class InitSounds {
     public static DeferredHolder<SoundEvent, SoundEvent> YUZU_TITLE_SENREN = register("yuzu_title_senren");
     public static DeferredHolder<SoundEvent, SoundEvent> YUZU_TITLE_BUTTON_REALMS = register("yuzu_title_button_realms");
     public static DeferredHolder<SoundEvent, SoundEvent> YUZU_TITLE_BUTTON_MOD_LIST = register("yuzu_title_button_mod_list");
+    public static DeferredHolder<SoundEvent, SoundEvent> YUZU_TITLE_BUTTON_SINGLEPLAYER = register("yuzu_title_button_singleplayer");
+    public static DeferredHolder<SoundEvent, SoundEvent> YUZU_TITLE_BUTTON_MUTIPLAYER = register("yuzu_title_button_mutiplayer");
 
     public static DeferredHolder<SoundEvent, SoundEvent> register(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(YuZuUI.MODID, name)));
