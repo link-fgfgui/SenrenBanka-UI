@@ -18,9 +18,9 @@ import net.minecraft.client.gui.screens.worldselection.SelectWorldScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.texture.Tickable;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
+import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.client.gui.ModListScreen;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.gui.ModListScreen;
 import org.apache.commons.compress.utils.Lists;
 
 import java.util.List;
@@ -410,7 +410,7 @@ public class SenrenBankaTitleScreen extends TitleScreen {
         return super.mouseClicked(mouseX,mouseY,button);
     }
 
-    public void playSound(RegistryObject<SoundEvent> sound) {
-        Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(sound.get(), 1.0f, 1.0f));
+    public void playSound(Holder<SoundEvent> sound) {
+        Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(sound.value(), 1.0f, 1.0f));
     }
 }
