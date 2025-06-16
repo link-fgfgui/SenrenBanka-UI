@@ -9,15 +9,17 @@ import org.joml.Matrix4f;
  * @description : 来自<a href="https://github.com/paulzzh/YuZuUI-GTNH/blob/master/src/main/java/com/paulzzh/yuzu/gui/RenderUtils.java">paulzzh/YuZuUI-GTNH</a>, 有部分修改
  */
 public class RenderUtils {
-
     public static void blit(float x, float y, float width, float height, PoseStack poseStack) {
-        Matrix4f matrix4f = poseStack.last().pose();
-        BufferBuilder bufferBuilder = Tesselator.getInstance().getBuilder();
-        bufferBuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        bufferBuilder.vertex(matrix4f, x, y, 0).uv(0, 0).endVertex();
-        bufferBuilder.vertex(matrix4f, x, y + height, 0).uv(0, 1).endVertex();
-        bufferBuilder.vertex(matrix4f, x + width, y + height, 0).uv(1, 1).endVertex();
-        bufferBuilder.vertex(matrix4f, x + width, y, 0).uv(1, 0).endVertex();
-        BufferUploader.drawWithShader(bufferBuilder.end());
+        Matrix4f matrix = poseStack.last().pose();
+        BufferBuilder buf = Tesselator.getInstance().begin(
+                VertexFormat.Mode.QUADS,
+                DefaultVertexFormat.POSITION_TEX
+        );
+        buf.addVertex(matrix, x,   y,          0).setUv(0f, 0f);
+        buf.addVertex(matrix, x,         y + height, 0).setUv(0f, 1f);
+        buf.addVertex(matrix, x + width, y + height, 0).setUv(1f, 1f);
+        buf.addVertex(matrix, x + width, y,          0).setUv(1f, 0f);
+
+        BufferUploader.drawWithShader(buf.buildOrThrow());
     }
 }

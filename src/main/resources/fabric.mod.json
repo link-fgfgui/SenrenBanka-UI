@@ -28,6 +28,6 @@
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "modmenu": "7.2.2"
+    "modmenu": ">=11.0.3"
   }
 }

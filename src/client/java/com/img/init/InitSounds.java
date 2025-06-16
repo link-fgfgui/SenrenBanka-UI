@@ -12,16 +12,16 @@ import net.minecraft.core.registries.Registries;
  * @create : 2024/10/25
  */
 public class InitSounds {
-    public static final ResourceLocation YUZU_TITLE_BUTTON_ON_ID = new ResourceLocation("yuzu", "yuzu_title_button_on");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_CLICK_ID = new ResourceLocation("yuzu", "yuzu_title_button_click");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_SELECT_WORLD_ID = new ResourceLocation("yuzu", "yuzu_title_button_select_world");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_OPTIONS_ID = new ResourceLocation("yuzu", "yuzu_title_button_options");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_QUIT_GAME_ID = new ResourceLocation("yuzu", "yuzu_title_button_quit_game");
-    public static final ResourceLocation YUZU_TITLE_SENREN_ID = new ResourceLocation("yuzu", "yuzu_title_senren");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_REALMS_ID = new ResourceLocation("yuzu", "yuzu_title_button_realms");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_MOD_LIST_ID = new ResourceLocation("yuzu", "yuzu_title_button_mod_list");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_SINGLEPLAYER_ID = new ResourceLocation("yuzu", "yuzu_title_button_singleplayer");
-    public static final ResourceLocation YUZU_TITLE_BUTTON_MUTIPLAYER_ID = new ResourceLocation("yuzu", "yuzu_title_button_mutiplayer");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_ON_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_on");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_CLICK_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_click");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_SELECT_WORLD_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_select_world");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_OPTIONS_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_options");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_QUIT_GAME_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_quit_game");
+    public static final ResourceLocation YUZU_TITLE_SENREN_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_senren");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_REALMS_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_realms");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_MOD_LIST_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_mod_list");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_SINGLEPLAYER_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_singleplayer");
+    public static final ResourceLocation YUZU_TITLE_BUTTON_MUTIPLAYER_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_button_mutiplayer");
 
     public static final SoundEvent YUZU_TITLE_BUTTON_ON = SoundEvent.createVariableRangeEvent(YUZU_TITLE_BUTTON_ON_ID);
     public static final SoundEvent YUZU_TITLE_BUTTON_CLICK = SoundEvent.createVariableRangeEvent(YUZU_TITLE_BUTTON_CLICK_ID);

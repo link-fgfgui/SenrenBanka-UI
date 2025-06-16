@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class YuZuUI implements ModInitializer {
     public static final String MOD_ID = "yuzu";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static final ResourceLocation YUZU_TITLE_MUSIC_ID = new ResourceLocation("yuzu", "yuzu_title_music");
+    public static final ResourceLocation YUZU_TITLE_MUSIC_ID = ResourceLocation.fromNamespaceAndPath("yuzu", "yuzu_title_music");
 
     public static final SoundEvent YUZU_TITLE_MUSIC = SoundEvent.createVariableRangeEvent(YUZU_TITLE_MUSIC_ID);
 
