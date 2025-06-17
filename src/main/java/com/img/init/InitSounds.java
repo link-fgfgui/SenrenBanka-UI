@@ -30,7 +30,7 @@ public class InitSounds {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(YuZuUI.MODID, name)));
     }
     public static Holder<SoundEvent> registerNOW(String name) {
-        ResourceLocation ResLoc=new ResourceLocation(YuZuUI.MODID, name);
+        ResourceLocation ResLoc=ResourceLocation.fromNamespaceAndPath(YuZuUI.MODID, name);
         SoundEvent sound= SoundEvent.createVariableRangeEvent(ResLoc);
         ForgeRegistries.SOUND_EVENTS.register(ResLoc,sound);
         return ForgeRegistries.SOUND_EVENTS.getHolder(ForgeRegistries.SOUND_EVENTS.getKey(sound)).get();
